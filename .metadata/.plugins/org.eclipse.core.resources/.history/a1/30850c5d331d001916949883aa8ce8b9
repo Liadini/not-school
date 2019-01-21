@@ -1,9 +1,0 @@
-package guessnumbergame;
-
-public class GuessNumberMenu {
-
-	public static void main(String[] args) {
-		GuessNumber tester = new GuessNumber(50);
-	}
-
-}
