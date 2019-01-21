@@ -1,0 +1,16 @@
+package guessnumbergame;
+
+import java.util.Scanner;
+
+public class GuessNumberMenu {
+
+	public static void main(String[] args) {
+		GuessNumber guesser = new GuessNumber();
+		Scanner kboard = new Scanner(System.in);
+		System.out.print("Enter an end-value for the random number ---> ");
+		int max = kboard.nextInt();
+		int randNum = guesser.getRandom(max);
+		guesser.guess(randNum, max-1);
+	}
+
+}

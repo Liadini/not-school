@@ -1,0 +1,27 @@
+package guessnumbergame;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class GuessNumber {
+	
+	public int getRandom(int end) {
+		Random rand = new Random();
+		return rand.nextInt(end);
+	}
+	
+	public void guess(int n, int max) {
+		Scanner kboard = new Scanner(System.in);
+		int input = 0;
+		while (input!=n) {
+			System.out.print("Guess a number! ---> ");
+			input = kboard.nextInt();
+			if (input>max)
+				System.out.println("That number is outside the range of the random number!");
+			if (input<n)
+				System.out.println("That's too low!");
+			else
+				System.out.println("That's too high!");
+		}
+	}
+}

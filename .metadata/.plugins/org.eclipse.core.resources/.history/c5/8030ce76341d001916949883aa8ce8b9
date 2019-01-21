@@ -1,0 +1,15 @@
+package guessnumbergame;
+
+import java.util.Scanner;
+
+public class GuessNumberMenu {
+
+	public static void main(String[] args) {
+		GuessNumber guesser = new GuessNumber();
+		Scanner kboard = new Scanner(System.in);
+		System.out.print("Enter an end-value for the random number ---> ");
+		int choice = kboard.nextInt();
+		guesser.getRandom(choice);
+	}
+
+}

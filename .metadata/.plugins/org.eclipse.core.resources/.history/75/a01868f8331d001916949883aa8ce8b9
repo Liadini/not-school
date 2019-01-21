@@ -1,0 +1,18 @@
+package guessnumbergame;
+
+import java.util.Random;
+
+public class GuessNumber {
+	private int end = 0;
+
+	public GuessNumber(int end) {
+		this.end = end;
+		Random randomNumber = new Random();
+		int rand = randomNumber.nextInt(this.end);
+		System.out.println(rand);
+	}
+	
+	public void guess(int num) {
+		
+	}
+}
