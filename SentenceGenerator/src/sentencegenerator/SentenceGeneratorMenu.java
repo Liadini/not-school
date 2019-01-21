@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class SentenceGeneratorMenu {
 
+	// asks user for type of sentence, generates it
 	public static void main(String[] args) throws InterruptedException {
 		SentenceGenerator generator = new SentenceGenerator();
 		Scanner sc = new Scanner(System.in);

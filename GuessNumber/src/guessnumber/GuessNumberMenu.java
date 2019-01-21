@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class GuessNumberMenu {
 
+	// asks for limit, starts game
 	public static void main(String[] args) {
 		GuessNumber guesser = new GuessNumber();
 		Scanner kboard = new Scanner(System.in);

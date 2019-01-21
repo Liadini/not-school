@@ -4,6 +4,7 @@ import java.util.Random;
 
 public class SentenceGenerator {
 
+	// generates a random Shakespearean insult
 	public String getShakespeareanInsult() {
 		Random rand = new Random();
 		String[] adjArr = new String[] {"hateful", "nasty", "common", "bloody", "vacant", "knavish", "quarrelsome", 

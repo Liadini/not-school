@@ -5,11 +5,13 @@ import java.util.Scanner;
 
 public class GuessNumber {
 	
+	// returns random number within specified limits
 	public int getRandom(int end) {
 		Random rand = new Random();
 		return rand.nextInt(end);
 	}
 	
+	// prompts user to guess number
 	public void guess(int n, int max) {
 		Scanner kboard = new Scanner(System.in);
 		int input = 0, numOfGuesses = 0;
