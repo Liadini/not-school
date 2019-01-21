@@ -1,4 +1,5 @@
 package geometrycalculator;
+
 // https://en.wikipedia.org/wiki/List_of_formulas_in_elementary_geometry and https://www.calculatorsoup.com/calculators/geometry-solids/geometricshapes.php
 import java.util.Scanner;
 
@@ -106,6 +107,18 @@ public class GeometryCalculatorMenu {
 						break;
 					}
 				} while (shouldRepeat);
+				break;
+			case "LEAVE":
+			case "QUIT":
+			case "EXIT":
+			case "STOP":
+			case "ST":
+			case "L":
+			case "Q":
+			case "E":
+			case "S":
+				System.out.println("Quitting now.");
+				sc.close();
 				break;
 			default:
 				System.out.println("I'm sorry, that wasn't an option! Please try again.\n");
