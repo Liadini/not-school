@@ -9,7 +9,7 @@ public class GeometryCalculatorMenu {
 	public static void main(String[] args) throws InterruptedException {
 		GeometryCalculator calc = new GeometryCalculator();
 		Scanner sc = new Scanner(System.in);
-		double length1, length2, length3, length4, length5, length6, length7, length8;
+		double length1, length2, length3, length4, length5;
 		boolean shouldContinue = true;
 		do {
 			System.out.print("Enter a shape/command! ---> ");
