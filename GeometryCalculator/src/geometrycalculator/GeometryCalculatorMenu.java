@@ -23,7 +23,7 @@ public class GeometryCalculatorMenu {
 				length1 = sc.nextDouble();
 				System.out.println("Area of square = " + calc.squareArea(length1) + 
 						", Perimeter of square = " + calc.squarePerimeter(length1) + "\n");
-				Thread.sleep(2000);
+				Thread.sleep(1000);
 				break;
 			case "RECTANGLE":
 			case "RECT":
@@ -33,7 +33,7 @@ public class GeometryCalculatorMenu {
 				length2 = sc.nextDouble();
 				System.out.println("Area of rectangle = " + calc.rectArea(length1, length2) + 
 						", Perimeter of rectangle = " + calc.rectPerimeter(length1, length2) + "\n");
-				Thread.sleep(2000);
+				Thread.sleep(1000);
 				break;
 			case "CIRCLE":
 			case "CIRC":
@@ -42,7 +42,7 @@ public class GeometryCalculatorMenu {
 				length1 = sc.nextDouble();
 				System.out.println("Area of circle = " + calc.circArea(length1) + 
 						", Circumference of circle = " + calc.circCircumf(length1));
-				Thread.sleep(2000);
+				Thread.sleep(1000);
 				break;
 			case "LEAVE":
 			case "QUIT":
