@@ -20,13 +20,13 @@ public class SentenceGeneratorMenu {
 			case "shakespeare":
 			case "Shakespeare":
 				System.out.println(generator.getShakespeareanInsult() + "\n");
-				Thread.sleep(2000);
+				Thread.sleep(1000);
 				break;
 			case "2":
 			case "sentence":
 			case "Sentence":
 				System.out.println("I'm sorry, but this menu option is a work in progress. Please pick another! \n");
-				Thread.sleep(2000);
+				Thread.sleep(1000);
 				break;
 			case "3":
 			case "quit":
@@ -36,7 +36,7 @@ public class SentenceGeneratorMenu {
 				break;
 			default:
 				System.out.println("I'm sorry, but that menu option doesn't exist. Please pick another! \n");
-				Thread.sleep(2000);
+				Thread.sleep(1000);
 			}
 		} while (shouldContinue);
 	}
