@@ -13,8 +13,16 @@ public class Game extends Canvas implements Runnable {
 	private Thread thread;
 	private boolean running = false;
 
+	private Handler handler;
+
 	public Game() {
+		handler = new Handler();
+		this.addKeyListener(new KeyInput(handler));
+
 		new Window(WIDTH, HEIGHT, "SURVIVE THE WAVES", this);
+
+		handler.addObject(new Player(WIDTH / 2 - 32, HEIGHT / 2 - 32, ID.Player));
+		handler.addObject(new BasicEnemy(WIDTH / 2 - 32, HEIGHT / 2 - 32, ID.BasicEnemy));
 	}
 
 	public synchronized void start() {
@@ -51,7 +59,7 @@ public class Game extends Canvas implements Runnable {
 
 			if (System.currentTimeMillis() - timer > 1000) {
 				timer += 1000;
-				System.out.println("FPS: " + frames);
+//				System.out.println("FPS: " + frames);
 				frames = 0;
 			}
 		}
@@ -59,7 +67,7 @@ public class Game extends Canvas implements Runnable {
 	}
 
 	private void tick() {
-
+		handler.tick();
 	}
 
 	private void render() {
@@ -74,6 +82,8 @@ public class Game extends Canvas implements Runnable {
 		g.setColor(Color.BLACK);
 		g.fillRect(0, 0, WIDTH, HEIGHT);
 
+		handler.render(g);
+
 		g.dispose();
 		bs.show();
 	}
@@ -81,4 +91,5 @@ public class Game extends Canvas implements Runnable {
 	public static void main(String[] args) {
 		new Game();
 	}
+
 }
