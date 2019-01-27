@@ -1,6 +1,7 @@
 package main;
 
 import java.awt.Graphics;
+import java.awt.Rectangle;
 
 public abstract class GameObject {
 	protected int x, y;
@@ -16,6 +17,8 @@ public abstract class GameObject {
 	public abstract void tick();
 
 	public abstract void render(Graphics g);
+
+	public abstract Rectangle getBounds();
 
 	public void setX(int x) {
 		this.x = x;
@@ -33,14 +36,6 @@ public abstract class GameObject {
 		return y;
 	}
 
-	public void setId(ID id) {
-		this.id = id;
-	}
-
-	public ID getId() {
-		return id;
-	}
-
 	public void setVelX(int velX) {
 		this.velX = velX;
 	}
@@ -55,6 +50,14 @@ public abstract class GameObject {
 
 	public int getVelY() {
 		return velY;
+	}
+
+	public void setId(ID id) {
+		this.id = id;
+	}
+
+	public ID getId() {
+		return id;
 	}
 
 }
