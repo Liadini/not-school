@@ -14,26 +14,23 @@ public class Game extends Canvas implements Runnable {
 	private Thread thread;
 	private boolean running = false;
 
+	private Random r;
 	private Handler handler;
 	private HUD hud;
-	private Random r;
+	private Spawn spawner;
 
 	public Game() {
 		handler = new Handler();
 		this.addKeyListener(new KeyInput(handler));
 
 		new Window(WIDTH, HEIGHT, "SURVIVE THE WAVES", this);
-		
-		hud = new HUD();
-		
+
 		r = new Random();
+		hud = new HUD();
+		spawner = new Spawn(handler, hud);
 
 		handler.addObject(new Player(WIDTH / 2 - 32, HEIGHT / 2 - 32, ID.Player, handler));
-		handler.addObject(new BasicEnemy(r.nextInt(WIDTH), r.nextInt(HEIGHT), ID.BasicEnemy, handler));
-		handler.addObject(new BasicEnemy(r.nextInt(WIDTH), r.nextInt(HEIGHT), ID.BasicEnemy, handler));
-		handler.addObject(new BasicEnemy(r.nextInt(WIDTH), r.nextInt(HEIGHT), ID.BasicEnemy, handler));
-		handler.addObject(new BasicEnemy(r.nextInt(WIDTH), r.nextInt(HEIGHT), ID.BasicEnemy, handler));
-		handler.addObject(new BasicEnemy(r.nextInt(WIDTH), r.nextInt(HEIGHT), ID.BasicEnemy, handler));
+		handler.addObject(new BasicEnemy(r.nextInt(Game.WIDTH - 50), r.nextInt(Game.HEIGHT - 50), ID.BasicEnemy, handler));
 	}
 
 	public synchronized void start() {
@@ -81,6 +78,7 @@ public class Game extends Canvas implements Runnable {
 	private void tick() {
 		handler.tick();
 		hud.tick();
+		spawner.tick();
 	}
 
 	private void render() {

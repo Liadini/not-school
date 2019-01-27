@@ -15,18 +15,18 @@ public class Player extends GameObject {
 	public void tick() {
 		x += velX;
 		y += velY;
-		
+
 		x = Game.clamp(x, 0, Game.WIDTH - 37);
 		y = Game.clamp(y, 0, Game.HEIGHT - 87);
-		
+
 		collision();
 	}
 
 	private void collision() {
 		for (int i = 0; i < handler.object.size(); i++) {
 			GameObject tempObject = handler.object.get(i);
-			
-			if (tempObject.getId() == ID.BasicEnemy) { // tempObject is now BasicEnemy
+
+			if (tempObject.getId() == ID.BasicEnemy || tempObject.getId() == ID.FastEnemy) { // tempObject is now BasicEnemy
 				if (getBounds().intersects(tempObject.getBounds())) {
 					// collision code
 					HUD.HEALTH -= 2;
@@ -34,9 +34,9 @@ public class Player extends GameObject {
 			}
 		}
 	}
-	
+
 	public void render(Graphics g) {
-		g.setColor(Color.MAGENTA);
+		g.setColor(Color.WHITE);
 		g.fillRect(x, y, 32, 32);
 	}
 
