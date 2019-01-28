@@ -27,10 +27,16 @@ public class Player extends GameObject {
 			GameObject tempObject = handler.object.get(i);
 
 			if (tempObject.getId() == ID.BasicEnemy || tempObject.getId() == ID.FastEnemy
-					|| tempObject.getId() == ID.SmartEnemy) { // tempObject is now BasicEnemy or FastEnemy or SmartEnemy
+					|| tempObject.getId() == ID.SmartEnemy) {
 				if (getBounds().intersects(tempObject.getBounds())) {
 					// collision code
 					HUD.HEALTH -= 2;
+				}
+			}
+			if (tempObject.getId() == ID.BossEnemy) {
+				if (getBounds().intersects(tempObject.getBounds())) {
+					// collision code
+					HUD.HEALTH = 0;
 				}
 			}
 		}

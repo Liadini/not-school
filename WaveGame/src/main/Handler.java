@@ -23,6 +23,17 @@ public class Handler {
 		}
 	}
 
+	public void clearEnemies() {
+		for (int i = 0; i < object.size(); i++) {
+			GameObject tempObject = object.get(i);
+
+			if (tempObject.getId() != ID.Player) {
+				object.clear();
+				addObject(new Player((int) tempObject.getX(), (int) tempObject.getY(), ID.Player, this)); //TODO fix this nasty code
+			}
+		}
+	}
+	
 	public void addObject(GameObject object) {
 		this.object.add(object);
 	}
