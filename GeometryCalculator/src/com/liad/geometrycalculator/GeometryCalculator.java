@@ -1,4 +1,8 @@
-package geometrycalculator;
+package com.liad.geometrycalculator;
+
+/*
+ * Author: Liad Hermelin
+ */
 
 public class GeometryCalculator {
 

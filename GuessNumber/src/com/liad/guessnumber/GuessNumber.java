@@ -1,7 +1,11 @@
-package guessnumber;
+package com.liad.guessnumber;
 
 import java.util.Random;
 import java.util.Scanner;
+
+/*
+ * Author: Liad Hermelin
+ */
 
 public class GuessNumber {
 

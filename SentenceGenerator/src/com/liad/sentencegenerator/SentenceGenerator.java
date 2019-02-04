@@ -1,6 +1,10 @@
-package sentencegenerator;
+package com.liad.sentencegenerator;
 
 import java.util.Random;
+
+/*
+ * Author: Liad Hermelin
+ */
 
 public class SentenceGenerator {
 

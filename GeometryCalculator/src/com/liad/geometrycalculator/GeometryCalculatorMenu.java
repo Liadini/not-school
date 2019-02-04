@@ -1,7 +1,11 @@
-package geometrycalculator;
+package com.liad.geometrycalculator;
 
 // https://en.wikipedia.org/wiki/List_of_formulas_in_elementary_geometry and https://www.calculatorsoup.com/calculators/geometry-solids/geometricshapes.php
 import java.util.Scanner;
+
+/*
+ * Author: Liad Hermelin
+ */
 
 public class GeometryCalculatorMenu {
 
